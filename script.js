@@ -9,6 +9,18 @@ var symAdd = true;
 var password = [];
 var userChoices = [];
 
+function promptUser() {
+    passwordLength = prompt("Enter Password Lenth");
+
+    if ((passwordLength >= 8) && (passwordLength <= 128)) {} else {
+        alert("Your password needs to be between 8 and 128 characters")
+        return
+    }
+    charAdd = confirm("Add Letters?");
+    numAdd = confirm("Add Numbers?");
+    symAdd = confirm("Add a special character?");
+    if (numAdd || symAdd || charAdd) { generate() } else { alert("Your password must contain a letter special character or number") }
+}
 
 function generate() {
     // char [Math.floor(Math.random() *char.length)]
@@ -34,19 +46,10 @@ function generate() {
     document.querySelector("#textArea").innerHTML = password.join("")
 }
 
-function promptUser() {
-    passwordLength = prompt("Enter Password Lenth");
-
-    if ((passwordLength >= 8) && (passwordLength <= 128)) { }
-    else {
-        alert("Your password needs to be between 8 and 128 characters")
-        return
-    }
-    charAdd = confirm("Add Letters?");
-    numAdd = confirm("Add Numbers?");
-    symAdd = confirm("Add a special character?");
-    if (numAdd || symAdd || charAdd) { generate() }
-    else { alert("Your password must contain a letter special character or number") }
+function copyTxt() {
+    var copyText = document.getElementById("textArea");
+    copyText.select("textArea");
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Password copied to clipboard.")
 }
-
-
