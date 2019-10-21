@@ -1,11 +1,13 @@
 var char = "abcdefghijklmnopqrstuvxwyz".split("")
 var num = "0123456789".split("")
 var sym = "!@#$%^&*-_".split("")
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
 
 var passwordLength = 0;
-var numAdd = true;
-var charAdd = true;
-var symAdd = true;
+var numAdd = false;
+var charAdd = false;
+var symAdd = false;
+var addCap = false;
 var password = [];
 var userChoices = [];
 
@@ -16,10 +18,11 @@ function promptUser() {
         alert("Your password needs to be between 8 and 128 characters")
         return
     }
-    charAdd = confirm("Add Letters?");
+    addCap = confirm("Add Capital Letters?")
+    charAdd = confirm("Add Lower Case Letters?");
     numAdd = confirm("Add Numbers?");
-    symAdd = confirm("Add a special character?");
-    if (numAdd || symAdd || charAdd) { generate() } else { alert("Your password must contain a letter special character or number") }
+    symAdd = confirm("Add Special Characters?");
+    if (numAdd || symAdd || charAdd || addCap) { generate() } else { alert("Your password must contain at least one type of character") }
 }
 
 function generate() {
@@ -35,10 +38,13 @@ function generate() {
         userChoices = userChoices.concat(sym)
     }
     if (charAdd) {
-        password.push(sym[Math.floor(Math.random() * char.length)])
+        password.push(char[Math.floor(Math.random() * char.length)])
         userChoices = userChoices.concat(char)
     }
-
+    if (addCap) {
+        password.push(upper[Math.floor(Math.random() * upper.length)])
+        userChoices = userChoices.concat(upper)
+    }
     while (password.length < passwordLength) {
         password.push(userChoices[Math.floor(Math.random() * userChoices.length)])
     }
