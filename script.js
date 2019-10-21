@@ -43,7 +43,7 @@ function generate() {
         password.push(userChoices[Math.floor(Math.random() * userChoices.length)])
     }
 
-    document.querySelector("#textArea").innerHTML = password.join("")
+    document.querySelector("textArea").innerHTML = password.join("")
 }
 
 function copyTxt() {
