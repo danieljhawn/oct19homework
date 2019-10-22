@@ -11,6 +11,10 @@ var addCap = false;
 var password = [];
 var userChoices = [];
 
+function clearPass() {
+    password.length = 0;
+}
+
 function promptUser() {
     passwordLength = prompt("Enter Password Lenth");
 
