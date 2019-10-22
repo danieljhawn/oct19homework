@@ -6,4 +6,6 @@ This step was very helpful! Originally I was overwhelemed by the sheer number of
 
 The assignment requires that we ask the user what kind of characters they would like to use in their passwords and then generate a random string of characters to suit their choice.
 
-The first step was to create variables for the different kinds of characters that are available
+The first step was to create variables for the different kinds of characters that are available, so one var for lower case, one for upper case, another for special characters and a 4th var for numbers.
+
+I then created variable for all of the options that I wanted the user to have, as well as a variable for the password itself, and a variable for the length of the final password.
