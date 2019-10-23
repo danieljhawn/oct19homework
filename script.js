@@ -12,7 +12,11 @@ var password = [];
 var userChoices = [];
 
 function clearPass() {
-    password.length = 0;
+    userChoices.length = 0;
+    var numAdd = false;
+    var charAdd = false;
+    var symAdd = false;
+    var addCap = false;
 }
 
 function promptUser() {
@@ -54,6 +58,8 @@ function generate() {
     }
 
     document.querySelector("textArea").innerHTML = password.join("")
+    clearPass()
+
 }
 
 function copyTxt() {
