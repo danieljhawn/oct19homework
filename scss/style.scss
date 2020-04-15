@@ -1,4 +1,5 @@
-$light-color: #67b6f6;
+@import 'config';
+
 
 * {
     box-sizing: border-box;
@@ -8,6 +9,16 @@ $light-color: #67b6f6;
 
 body {
     background-color: $light-color;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-stack;
     line-height: 1.6;
 }
+
+.showcase {
+    @include set-background($primary-color);
+    height: 600px;
+    margin-top: 30px;
+}
+ 
+@import 'mobile';
+@import 'utilities';
+@import 'buttons';
