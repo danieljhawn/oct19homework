@@ -13,6 +13,8 @@ body {
 }
 
 .showcase {
+  border: 3px solid rgba(103, 182, 246, 0.5);
+  border-radius: 20px;
   padding: 1rem;
   background: #225ab3;
   background: linear-gradient(10deg, #225ab3 0%, #67b6f6 100%);
