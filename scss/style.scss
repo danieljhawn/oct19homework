@@ -1,24 +1,34 @@
-@import 'config';
-
+@import "config";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: $light-color;
-    font-family: $font-stack;
-    line-height: 1.6;
+  font-family: $font-stack;
+
+  background: rgb(34, 90, 179);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 90, 179, 1) 0%,
+    rgba(103, 182, 246, 1) 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .showcase {
-    @include set-background($primary-color);
-    height: 600px;
-    margin-top: 30px;
+  padding: 1rem;
+  background: rgb(34, 90, 179);
+  background: linear-gradient(
+    10deg,
+    rgba(34, 90, 179, 1) 0%,
+    rgba(103, 182, 246, 1) 100%
+  );
 }
- 
-@import 'mobile';
-@import 'utilities';
-@import 'buttons';
+
+@import "mobile";
+@import "utilities";
+@import "buttons";
