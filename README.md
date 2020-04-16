@@ -8,3 +8,6 @@ It prompts the user for the number of characters they want and also
   * Lower Case
   
   ### Uses Bootstrap and Sass for styling
+
+#### Deployed Version
+https://danieljhawn.github.io/passwordGenerator/
