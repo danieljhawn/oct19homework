@@ -6,3 +6,5 @@ It prompts the user for the number of characters they want and also
   * Numbers
   * Upper Case
   * Lower Case
+  
+  ### Uses Bootstrap and Sass for styling
